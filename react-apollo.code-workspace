@@ -1,0 +1,56 @@
+{
+	"folders": [
+		{
+			"path": "server"
+		},
+		{
+			"path": "client"
+		}
+	],
+	"settings": {
+		"files.autoSave": "onFocusChange",
+		"debug.terminal.clearBeforeReusing": true
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"type": "pwa-node",
+				"request": "launch",
+				"name": "Debug Server",
+				"runtimeExecutable": "nodemon",
+				"restart": true,
+				"console": "integratedTerminal",
+				"internalConsoleOptions": "neverOpen",
+				"cwd": "${fileDirname}\\server"
+			},
+			{
+				// "preLaunchTask": "Run Client", // The name of the task defined 
+				"type": "pwa-chrome",
+				"request": "launch",
+				"name": "Debug Client",
+				"url": "http://localhost:3000",
+				"webRoot": "\\client",
+				"cwd": "${fileDirname}\\client"
+			}
+		]
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "Run Client",
+				"command": "yarn",
+				"args": [
+					"start",
+					"--cwd",
+					"${fileDirname}\\client"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "${fileDirname}\\client"
+				}
+			}
+		]
+	}
+}

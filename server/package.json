@@ -1,0 +1,27 @@
+{
+  "name": "apollo-server",
+  "version": "1.0.0",
+  "description": "Sample server server using node",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --ext js,graphql --ignore data/ server.js"
+  },
+  "keywords": [],
+  "author": "Babak Ansari",
+  "license": "ISC",
+  "dependencies": {
+    "@okta/jwt-verifier": "^2.3.0",
+    "apollo-server-express": "^3.6.6",
+    "body-parser": "^1.19.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-jwt": "^6.1.1",
+    "graphql": "^16.3.0",
+    "jsonwebtoken": "^8.5.1",
+    "nodemon": "^2.0.16",
+    "notarealdb": "^0.2.2"
+  }
+}

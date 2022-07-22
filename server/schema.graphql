@@ -1,0 +1,26 @@
+type Query {
+    rank(id: ID!): Rank
+    crew(id: ID!): Crew
+    rostering: [Crew] 
+}
+
+input cerateCrewInput {
+    name: String!
+    rankId: ID!
+}
+
+type Mutation {
+    createCrew(input: cerateCrewInput): Crew
+}
+
+type Rank {
+    id: ID!
+    title: String!
+    Crews: [Crew]
+}
+
+type Crew {
+    id: ID!
+    name: String!
+    rank: Rank
+}
